@@ -1,0 +1,45 @@
+.property, .history {
+    text-align: center;
+    padding: 15px;
+    color: #bebebe;
+    font-size: 20px;
+}
+
+.active {
+    color: #4285f4;
+    border-bottom: #4285f4 solid 3px;
+}
+
+.wrap {
+    border-bottom: #bebebe solid 1px;
+}
+
+.first-state img{
+    max-height: 100px;
+    max-width: 100%;
+}
+.first-state {
+    padding: 25px;
+    display: flex;
+    justify-content: center;
+    align-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+.first-state p {
+    padding: 25px;
+    color: #bebebe;
+}
+
+.folder-choice table {
+    width: 100%;
+}
+
+.table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td {
+    border-top: none;
+}
+
+.first-column {
+    color: #bebebe;
+}

@@ -1,0 +1,51 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+        <div class="list-item">
+          <button (click)="onclick()" type="button" class="btn btn-primary">Tomcat 8.5</button>
+          </div>
+      <div class="row wrap">
+        <div class="col-md-6">
+          <div class="property active">
+            Свойства
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="history">
+            История
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4"></div>
+  </div>
+  <div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4 content">
+
+      <div class="first-state">
+        <img src="http://goatimeline.com/wp-content/uploads/2016/07/chat_icon_grey.png" alt="">
+        <p>Выберете файл или папку, чтобы посмотреть их свойства</p>
+      </div>
+
+      <div class="folder-choice">
+        <div class="table-responsive">
+          <table class="table">
+            <tbody>
+              <tr
+              *ngFor="let element of resultArr"
+              >
+                
+                <td class="first-column"> {{ element[0] }} </td>
+                <td> {{ element[1] }} </td>
+              </tr>
+              
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4"></div>
+  </div>
+</div>
