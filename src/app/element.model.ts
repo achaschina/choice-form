@@ -1,17 +1,17 @@
 export class Element {
-    public type: string;
-    public size: string;
-    public location: string;
-    public owner: string;
-    public changed: Date;
-    public created: Date;
+    public Тип: string;
+    public Размер: string;
+    public Расположение: string;
+    public Владелец: string;
+    public Изменено: Date;
+    public Создано: Date;
 
     constructor(type: string, size: string, location: string, owner: string, changed: Date, created: Date) {
-        this.type = type;
-        this.size = size;
-        this.location = location;
-        this.owner = owner;
-        this.changed = changed;
-        this.created = created;
+        this.Тип = type;
+        this.Размер = size;
+        this.Расположение = location;
+        this.Владелец = owner;
+        this.Изменено = changed;
+        this.Создано = created;
     }
 }

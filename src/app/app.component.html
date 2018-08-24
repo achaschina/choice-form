@@ -2,17 +2,21 @@
   <div class="row">
     <div class="col-md-4"></div>
     <div class="col-md-4">
-        <div class="list-item">
-          <button (click)="onclick()" type="button" class="btn btn-primary">Tomcat 8.5</button>
-          </div>
       <div class="row wrap">
         <div class="col-md-6">
-          <div class="property active">
+          <div 
+            class="property"
+            [ngClass] = "{'active': active}"
+            (click)="setActive()">
             Свойства
           </div>
         </div>
         <div class="col-md-6">
-          <div class="history">
+          <div 
+           class="history"
+           [ngClass] = "{'active': !active}"
+           (click)="setActive()"
+           >
             История
           </div>
         </div>
@@ -21,10 +25,21 @@
     <div class="col-md-4"></div>
   </div>
   <div class="row">
-    <div class="col-md-4"></div>
+    <div class="col-md-4">
+      <ul class="list-group">
+        <li class="list-group-item" typeContent="Папка" (click)= "onSelect($event)"> <span><i class="far fa-folder"></i></span>Мои файлы</li>
+        <li class="list-group-item" typeContent="Файл" (click)= "onSelect($event)"> <span><i class="far fa-file"></i></span>xFale.xml</li>
+        <li class="list-group-item" typeContent="Папка" (click)= "onSelect($event)"> <span><i class="far fa-folder"></i></span> Мои рисунки</li>
+        <li class="list-group-item" typeContent="Файл" (click)= "onSelect($event)"> <span><i class="far fa-file"></i></span>dFile.doc</li>
+        <li class="list-group-item" typeContent="Папка" (click)= "onSelect($event)"> <span><i class="far fa-folder"></i></span>Мои документы</li>
+      </ul>
+    </div>
     <div class="col-md-4 content">
 
-      <div class="first-state">
+      <div 
+        class="first-state"
+        *ngIf = "visible"
+         >
         <img src="http://goatimeline.com/wp-content/uploads/2016/07/chat_icon_grey.png" alt="">
         <p>Выберете файл или папку, чтобы посмотреть их свойства</p>
       </div>
@@ -36,7 +51,6 @@
               <tr
               *ngFor="let element of resultArr"
               >
-                
                 <td class="first-column"> {{ element[0] }} </td>
                 <td> {{ element[1] }} </td>
               </tr>

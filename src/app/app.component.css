@@ -43,3 +43,11 @@
 .first-column {
     color: #bebebe;
 }
+
+.visible {
+    visibility: hidden;
+}
+
+i.far.fa-folder, i.far.fa-file {
+    margin-right: 5px;
+}
